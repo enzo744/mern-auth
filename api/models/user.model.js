@@ -15,8 +15,11 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-    }
-    
+    },
+    profilePicture: {
+      type: String,
+      default: "https://static.vecteezy.com/ti/vettori-gratis/t1/2534006-social-media-chat-online-immagine-profilo-vuoto-icona-testa-e-corpo-persone-in-piedi-icona-sfondo-grigio-gratuito-vettoriale.jpg",
+    },
   },
   { timestamps: true }
 );
@@ -25,8 +28,3 @@ const User = mongoose.model('User', userSchema);
 
 export default User;
 
-// profilePicture: {
-//     type: String,
-//     default:
-//       'https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg',
-//   },
